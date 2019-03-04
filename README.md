@@ -1,6 +1,7 @@
 # Java Note
 ## <font color= #B22222>Tool kit</font>
 ### [<font color=#FF4500>git</font>](#git)
+
 <sapn id="git">
 <font face="微软雅黑">
 #### **基本命令**
@@ -43,11 +44,11 @@
 ***Tip2: ***git reset 版本号 ---- 将暂存区回退到指定版本。
 根据 $ git log --oneline 显示的版本号（下图黄色的字），可以回退到任何一个版本，也可通过 HEAD 来指定版本（下图红色的字）
 eg:
-| 版本号  | log|HEAD|remark
-| ---------- | -----------|-----------|
-| 2wrw343re   | log1   |HEAD   |当前版本|
-| 3ewreww34   | log2   |HEAD^  |上一个版本|
-| ewew232rw   | log3   |HEAD^^ |上上一个版本|
-| 323ewerre   | log4   |HEAD~n |第n个版本|
+| 版本号  | log|HEAD|remark|
+| ---------- | -----------|-----------|-----------|
+| 2wrw343re   | log1   |HEAD   |当前版本   |
+| 3ewreww34   | log2   |HEAD^  |上一个版本   |
+| ewew232rw   | log3   |HEAD^^ |上上一个版本 |
+| 323ewerre   | log4   |HEAD~n |第n个版本   |
 </font>
 </span>
