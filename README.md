@@ -1,7 +1,7 @@
 
 # Java Note
 ## <font color=#B22222>Tool kit</font>
-### [<font color=#FF4500>git</font>](#git)
+### [<font color='red'>git</font>](#git)
 <sapn id="git">
 <font face="微软雅黑">
 **基本命令**
@@ -21,8 +21,4 @@
 	
 </font>
 </span>
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+
