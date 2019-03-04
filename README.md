@@ -17,6 +17,7 @@
 	- **.git目录** 
 	- **暂存区**
 	- **工作目录**
+	
 	![](https://camo.githubusercontent.com/7e36122d6585913b6c61de937a77209d3b5abebc/68747470733a2f2f692e696d6775722e636f6d2f42307731316e622e706e67)
 - git add <fielname>(ga):添加一个文件到暂存区
 - git add . (gaa):添加所有文件到暂存区
