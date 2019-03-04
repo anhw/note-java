@@ -1,10 +1,10 @@
 
 # Java Note
-<font color=#B22222>Tool kit</font>
+## <font color=#B22222>Tool kit</font>
 ### [<font color=#FF4500>git</font>](#git)
 <sapn id="git">
 <font face="微软雅黑">
-**基本命令**
+ **基本命令**
 
 - git config --global user.name "Your name"
 - git config --global user.email "youremail@example.com"	
