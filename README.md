@@ -27,7 +27,7 @@
 #### **恢复修改的文件**
 ***情况I***
 只修改了文件，没有任何git操作
-- git checkout -- < filename >
+- git checkout -- < filename > 
 ***情况II***
 修改了文件，并提交到了暂存区
 - git log -- oneline：可省略
