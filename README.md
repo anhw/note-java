@@ -9,7 +9,7 @@
 - git config --global user.name "Your name"
 - git config --global user.email "youremail@example.com"	
 	- Ex:git config --global core.editor vim
-- git init : 初始化一个仓库，会生成 .git文件
+- git init : 初始化一个仓库，会生成 .git文件 
 
 #### **Commit 结构**
 
@@ -38,10 +38,10 @@
 - git log -- oneline:可省略
 - git reser HEAD^:回退到上一个版本
 - git checkout -- < filename >
-***Tip1: ***情况II和情况III只有回退的版本不一样
+***Tip1:***情况II和情况III只有回退的版本不一样
 对于情况II,并没有$ git commit,版本库没有更新记录，所以回退的是当前版本
 对于情况III,由于执行了$ git commit,版本库已经有了提交记录，所以回退的是当前版本
-***Tip2: ***git reset 版本号 ---- 将暂存区回退到指定版本。
+***Tip2:***git reset 版本号 ---- 将暂存区回退到指定版本。
 根据 $ git log --oneline 显示的版本号（下图黄色的字），可以回退到任何一个版本，也可通过 HEAD 来指定版本（下图红色的字）
 eg:
 
