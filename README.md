@@ -27,22 +27,19 @@
 - git add *.js:添加所有后缀为js的文件到暂存区
 - git rm -- cached <file>:存暂存区删除一个新文件
 #### **恢复修改的文件**
-***情况I***
-只修改了文件，没有任何git操作
-	
+***情况I***只修改了文件，没有任何git操作
 - git checkout -- < filename > 
-***情况II***
 
-修改了文件，并提交到了暂存区
+***情况II***修改了文件，并提交到了暂存区
 - git log -- oneline：可省略
 - git reset HEAD：回退到当前版本
 - git checkout -- < filename >
-***情况III***
 
-修改了文件并提交到了仓库
+***情况III***修改了文件并提交到了仓库
 - git log -- oneline:可省略
 - git reser HEAD^:回退到上一个版本
 - git checkout -- < filename >
+
 ***Tip1:***情况II和情况III只有回退的版本不一样
 对于情况II,并没有$ git commit,版本库没有更新记录，所以回退的是当前版本
 对于情况III,由于执行了$ git commit,版本库已经有了提交记录，所以回退的是当前版本
