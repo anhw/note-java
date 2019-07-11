@@ -1,6 +1,14 @@
 # Java Note
 ## <font color=#B22222>Tool kit</font>
 ### [<font color=#FF4500>git</font>](#git)
+## <font color=#B22222>MOM</font>
+### [<font color=#FF4500>ActiveMQ</font>](#ActiveMQ)
+### [<font color=#FF4500>RabbitMQ</font>](#RabbitMQ)
+### [<font color=#FF4500>RocketMQ</font>](#RocketMQ)
+## <font color=#B22222>Database</font>
+### [<font color=#FF4500>MySQL</font>](#RocketMQ)
+### [<font color=#FF4500>Oracle</font>](#RocketMQ)
+### [<font color=#FF4500>Redis</font>](#RocketMQ)
 ## <font color=#B22222>ORM</font>
 ### [<font color=#FF4500>Hibernate</font>](#git)
 ### [<font color=#FF4500>JPA</font>](#git)
