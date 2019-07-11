@@ -1,8 +1,12 @@
 # Java Note
 ## <font color=#B22222>Tool kit</font>
 ### [<font color=#FF4500>git</font>](#git)
+## <font color=#B22222>ORM</font>
 ## <font color=#B22222>Spring</font>
+### [<font color=#FF4500>SpringMVC</font>](#SpringMVC)
+### [<font color=#FF4500>SpringData</font>](#SpringData)
 ### [<font color=#FF4500>SpringBoot</font>](#SpringBoot)
+### [<font color=#FF4500>SpringCloud</font>](#SpringCloud)
 
 <sapn id="git">
 <font face="微软雅黑">
