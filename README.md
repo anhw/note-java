@@ -33,7 +33,7 @@ public static void exit(int status) {
 status != 0 表示非正常退出，一般放在 catch 块中
 status = 0 表示正常退出
 
-######Java不可变类（immutable）机制与String的不可变性
+####Java不可变类（immutable）机制与String的不可变性
 
 [原文链接](https://www.cnblogs.com/jaylon/p/5721571.html)
 
