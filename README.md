@@ -21,7 +21,9 @@
 ### [<font color=#FF4500>SpringCloud</font>](#SpringCloud)
 
 <sapn id="JDK">
+
 ######System.exit(int status);
+
 java.lang.System#exit
 ```
 public static void exit(int status) {
@@ -30,12 +32,17 @@ public static void exit(int status) {
 ```
 status != 0 表示非正常退出，一般放在 catch 块中
 status = 0 表示正常退出
+
 ######Java不可变类（immutable）机制与String的不可变性
+
 [原文链接](https://www.cnblogs.com/jaylon/p/5721571.html)
+
 String类就是典型的不可变类
-**不可变类**
+
+**不可变类**  
 所谓的不可变类是指这个类的实例一旦创建完成后，就不能改变其成员变量值。如JDK内部自带的很多不可变类：Interger、Long和String等。
-**可变类**
+
+**可变类**  
 相对于不可变类，可变类创建实例后可以改变其成员变量值，开发中创建的大部分类都属于可变类
 * 不可变类的优缺点
 1. 线程安全
@@ -53,7 +60,7 @@ String类就是典型的不可变类
     }
 	```
 5. 在 getter方法中不要直接返回对象本身，而是克隆对象，并返回对象的拷贝
-	> eg: String 类中的代码片段,使用 System.arraycopy 对字符数组进行深拷贝
+	> eg: String 类中的代码片段,使用 System.arraycopy() 对字符数组进行深拷贝
 	```
 	public char[] toCharArray() {
         // Cannot use Arrays.copyOf because of class initialization order issues
@@ -62,7 +69,7 @@ String类就是典型的不可变类
         return result;
     }
 	```
-* String对象的不可变性的优缺点
+* String对象的不可变性的优缺点  
 **优点**
 1. 字符串常量池的需要.
 字符串常量池可以将一些字符常量放在常量池中重复使用，避免每次都重新创建相同的对象、节省存储空间。但如果字符串是可变的，此时相同内容的String还指向常量池的同一个内存空间，当某个变量改变了该内存的值时，其他遍历的值也会发生改变。所以不符合常量池设计的初衷。
@@ -76,7 +83,6 @@ String类就是典型的不可变类
 因为字符串是不可变的，所以在它创建的时候hashcode就被缓存了，不需要重新计算。这就使得字符串很适合作为Map中的键，字符串的处理速度要快过其它的键对象。这就是HashMap中的键往往都使用字符串。
 
 **缺点**
-
 1. 如果有对String对象值改变的需求，那么会创建大量的String对象。
 * 可通过反射对不可变类的成员变量进行修改
 ```
@@ -126,15 +132,15 @@ s = Hello_World
 - git rm -- cached <file>:存暂存区删除一个新文件
 #### **恢复修改的文件**
 	
-***情况I***只修改了文件，没有任何git操作
+***情况I*** 只修改了文件，没有任何git操作
 - git checkout -- < filename > 
 
-***情况II***修改了文件，并提交到了暂存区
+***情况II*** 修改了文件，并提交到了暂存区
 - git log -- oneline：可省略
 - git reset HEAD：回退到当前版本
 - git checkout -- < filename >
 
-***情况III***修改了文件并提交到了仓库
+***情况III*** 修改了文件并提交到了仓库
 - git log -- oneline:可省略
 - git reser HEAD^:回退到上一个版本
 - git checkout -- < filename >
