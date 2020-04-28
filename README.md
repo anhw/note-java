@@ -22,7 +22,7 @@
 
 <sapn id="JDK">
 
-######System.exit(int status);
+###### System.exit(int status);
 
 java.lang.System#exit
 ```
@@ -33,7 +33,7 @@ public static void exit(int status) {
 status != 0 表示非正常退出，一般放在 catch 块中
 status = 0 表示正常退出
 
-######Java不可变类（immutable）机制与String的不可变性
+###### Java不可变类（immutable）机制与String的不可变性
 
 [原文链接](https://www.cnblogs.com/jaylon/p/5721571.html)
 
@@ -73,39 +73,36 @@ String类就是典型的不可变类
 **优点**
 1. 字符串常量池的需要.
 字符串常量池可以将一些字符常量放在常量池中重复使用，避免每次都重新创建相同的对象、节省存储空间。但如果字符串是可变的，此时相同内容的String还指向常量池的同一个内存空间，当某个变量改变了该内存的值时，其他遍历的值也会发生改变。所以不符合常量池设计的初衷。
-
 2. 线程安全考虑。
 同一个字符串实例可以被多个线程共享。这样便不用因为线程安全问题而使用同步。字符串自己便是线程安全的。
-
 3. 类加载器要用到字符串，不可变性提供了安全性，以便正确的类被加载。譬如你想加载java.sql.Connection类，而这个值被改成了myhacked.Connection，那么会对你的数据库造成不可知的破坏。
-
 4. 支持hash映射和缓存。
 因为字符串是不可变的，所以在它创建的时候hashcode就被缓存了，不需要重新计算。这就使得字符串很适合作为Map中的键，字符串的处理速度要快过其它的键对象。这就是HashMap中的键往往都使用字符串。
 
-**缺点**
-1. 如果有对String对象值改变的需求，那么会创建大量的String对象。
-* 可通过反射对不可变类的成员变量进行修改
-```
-	//创建字符串"Hello World"， 并赋给引用s
-	String s = "Hello World"; 
-	System.out.println("s = " + s);	//Hello World
-
-	//获取String类中的value字段
-	Field valueFieldOfString = String.class.getDeclaredField("value");
-	//改变value属性的访问权限
-	valueFieldOfString.setAccessible(true);
-
-	//获取s对象上的value属性的值
-	char[] value = (char[]) valueFieldOfString.get(s);
-	//改变value所引用的数组中的第5个字符
-	value[5] = '_';
-	System.out.println("s = " + s);  //Hello_World
-```
-***打印结果***
-```
-s = Hello World
-s = Hello_World
-```
+   **缺点**
+    1. 如果有对String对象值改变的需求，那么会创建大量的String对象。
+    * 可通过反射对不可变类的成员变量进行修改
+    ```
+        //创建字符串"Hello World"， 并赋给引用s
+        String s = "Hello World"; 
+        System.out.println("s = " + s);	//Hello World
+    
+        //获取String类中的value字段
+        Field valueFieldOfString = String.class.getDeclaredField("value");
+        //改变value属性的访问权限
+        valueFieldOfString.setAccessible(true);
+    
+        //获取s对象上的value属性的值
+        char[] value = (char[]) valueFieldOfString.get(s);
+        //改变value所引用的数组中的第5个字符
+        value[5] = '_';
+        System.out.println("s = " + s);  //Hello_World
+    ```
+    ***打印结果***
+    ```
+    s = Hello World
+    s = Hello_World
+    ```
 </span>
 ***
 <sapn id="git">
